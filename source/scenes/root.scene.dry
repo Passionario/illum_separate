@@ -6,12 +6,11 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History (Rise of Illuminati Mod)
+= Rise of Illuminati: An Alternate History 
 
 @start_menu_2
 
 - @start: Start game
-- @credits: Credits
 - @game_over.achievements
 
 
@@ -20,7 +19,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 1778;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -30,6 +29,32 @@ Q.difficulty = 0;
 Q.historical_mode = 0;
 // old demographics
 Q.old_demographics = 0;
+
+// MOD STUFF
+// resources
+Q.wealth = 2;
+Q.favours = 1;
+Q.secrets = 1;
+
+Q.estates = ['nobles', 'clergy', 'judiciary', 'artisans', 'commoners', 'military'];
+Q.societies = ['illuminati', 'jesuit', 'rosy', 'de_mason', 'eu_mason', 'rebel', 'other', 'none'];
+
+// secret organizations
+// relations on a scale from 0 to 100
+Q.jesuit_relation = 35;
+Q.rosy_relation = 30;
+Q.de_mason_relation = 50;
+Q.eu_mason_relation = 55;
+Q.rebel_relation = 50;
+
+// awareness on a scale from 0 to 10
+Q.jesuit_awareness = 1;
+Q.rosy_relation = 1;
+Q.de_mason_relation = 2;
+Q.eu_mason_relation = 1;
+Q.rebel_relation = 0;
+
+
 
 // party resources
 Q.resources = 2;
